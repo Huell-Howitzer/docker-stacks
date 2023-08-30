@@ -1,0 +1,9 @@
+services:
+  jupyter:
+    image: Dockerfile
+    buildArgs:
+      - Dockerfile
+    ports:
+      - 8888
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
