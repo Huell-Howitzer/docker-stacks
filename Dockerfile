@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y libpq-dev
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install jupyter
+RUN pip install openai
 # Expose the port
 EXPOSE 8888
 COPY . /app
