@@ -1,5 +1,8 @@
 # Use jupyter/scipy-notebook image as a parent image
-FROM jupyter/scipy-notebook:2023-08-19
+FROM rmhowell/rocketpy:latest
+
+LABEL authors="Ryan M. Howell"
+
 
 # Set the working directory in /app
 WORKDIR /app
@@ -10,9 +13,8 @@ COPY . /app
 # Install postgresql-dev and Python dependencies
 USER root
 RUN apt-get update && apt-get install -y libpq-dev
-USER jovyan
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
-
 # Expose the port
 EXPOSE 8888
 
