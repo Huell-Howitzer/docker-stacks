@@ -16,6 +16,8 @@ RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install jupyter
 RUN pip install openai
+RUN pip install rich
+RUN pip install python-dotenv
 # Expose the port
 EXPOSE 8888
 COPY . /app
