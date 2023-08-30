@@ -18,7 +18,7 @@ RUN pip install jupyter
 RUN pip install openai
 RUN pip install rich
 RUN pip install python-dotenv
-pip install net-CDF4
+RUN pip install net-CDF4
 # Expose the port
 EXPOSE 8888
 COPY . /app
