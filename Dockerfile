@@ -5,7 +5,7 @@ FROM jupyter/scipy-notebook:2023-08-19
 WORKDIR /app
 
 # Add the current directory contents into the container at /app
-ADD . /app
+COPY . /app
 
 # Make port 8888 available to the world outside this container
 EXPOSE 8888
