@@ -19,6 +19,7 @@ RUN pip install openai
 RUN pip install rich
 RUN pip install python-dotenv
 RUN pip install netCDF4
+RUN pip install pymongo
 # Expose the port
 EXPOSE 8888
 COPY . /app
